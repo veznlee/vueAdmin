@@ -48,108 +48,112 @@
 
 </script>
 
+<!--
+
 <style scoped lang="scss">
-//混合
-@mixin border-radius($radius) {
-          border-radius: $radius;
-      -ms-border-radius: $radius;
-     -moz-border-radius: $radius;
-  -webkit-border-radius: $radius;
-}
-.scss-box {
-  @include border-radius(10px);
-}
-// .scss-box {
-//   border-radius: 10px;
-//   -ms-border-radius: 10px;
-//   -moz-border-radius: 10px;
-//   -webkit-border-radius: 10px; 
-// }
-
-
-//继承。
-%message-common {
-  border: 1px solid #ccc;
-  padding: 10px;
-  color: #333;
-}
-.scss-message {
-  @extend %message-common;
-}
-.scss-success {
-  @extend %message-common;
-  border-color: green;
-}
-.scss-error {
-  @extend %message-common;
-  border-color: red;
-}
-
-// .scss-message, .scss-success, .scss-error {
-//   border: 1px solid #ccc;
-//   padding: 10px;
-//   color: #333; 
-// }
-// .scss-success {
-//   border-color: green; 
-// }
-// .scss-error {
-//   border-color: red; 
-// }
-
-
-//算术运算符，例如+、-、*、/、%
-.scss-container { 
-  width: 100%;
-  &::after{
-    content:'';
-    display:block;
-    width:0;
-    height:0;
-    overflow: hidden;
-    clear:both
+  //混合
+  @mixin border-radius($radius) {
+            border-radius: $radius;
+        -ms-border-radius: $radius;
+      -moz-border-radius: $radius;
+    -webkit-border-radius: $radius;
   }
-}
-article[role="main"] {
-  float: left;
-  width: 600 / 960 * 100%;
-}
-aside[role="complementary"] {
-  float: right;
-  width: 300 / 960 * 100%;
-}
-
-
-//引用父级选择器"&"
-#scss-main {
-  color: black;
-  a {
-    font-weight: bold;
-    &:hover { color: red; }
+  .scss-box {
+    @include border-radius(10px);
   }
-}
-// #scss-main {
-//   color: black; 
-// }
-// #scss-main a {
-//   font-weight: bold; 
-// }
-// #scss-main a:hover {//&总是最近的父级
-//   color: red; 
-// }
+  // .scss-box {
+  //   border-radius: 10px;
+  //   -ms-border-radius: 10px;
+  //   -moz-border-radius: 10px;
+  //   -webkit-border-radius: 10px; 
+  // }
 
-//命名空间
-.scss-demo {
-  // 命令空间后带有冒号:
-  font: {
-    family: fantasy;
-    size: 2em;
-    weight: bold;
+
+  //继承。
+  %message-common {
+    border: 1px solid #ccc;
+    padding: 10px;
+    color: #333;
   }
-}
-// .scss-demo {
-//   font-family: fantasy;
-//   font-size: 30em;
-//   font-weight: bold; 
-// }
+  .scss-message {
+    @extend %message-common;
+  }
+  .scss-success {
+    @extend %message-common;
+    border-color: green;
+  }
+  .scss-error {
+    @extend %message-common;
+    border-color: red;
+  }
+
+  // .scss-message, .scss-success, .scss-error {
+  //   border: 1px solid #ccc;
+  //   padding: 10px;
+  //   color: #333; 
+  // }
+  // .scss-success {
+  //   border-color: green; 
+  // }
+  // .scss-error {
+  //   border-color: red; 
+  // }
+
+
+  //算术运算符，例如+、-、*、/、%
+  .scss-container { 
+    width: 100%;
+    &::after{
+      content:'';
+      display:block;
+      width:0;
+      height:0;
+      overflow: hidden;
+      clear:both
+    }
+  }
+  article[role="main"] {
+    float: left;
+    width: 600 / 960 * 100%;
+  }
+  aside[role="complementary"] {
+    float: right;
+    width: 300 / 960 * 100%;
+  }
+
+
+  //引用父级选择器"&"
+  #scss-main {
+    color: black;
+    a {
+      font-weight: bold;
+      &:hover { color: red; }
+    }
+  }
+  // #scss-main {
+  //   color: black; 
+  // }
+  // #scss-main a {
+  //   font-weight: bold; 
+  // }
+  // #scss-main a:hover {//&总是最近的父级
+  //   color: red; 
+  // }
+
+  //命名空间
+  .scss-demo {
+    // 命令空间后带有冒号:
+    font: {
+      family: fantasy;
+      size: 2em;
+      weight: bold;
+    }
+  }
+  // .scss-demo {
+  //   font-family: fantasy;
+  //   font-size: 30em;
+  //   font-weight: bold; 
+  // }
 </style>
+
+-->
