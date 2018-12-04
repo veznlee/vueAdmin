@@ -44,10 +44,30 @@ You can change theme by
 ```
 4. Edit src/styles/vars.scss
 
+# use scss
+[https://www.jb51.net/article/126937.htm](https://www.jb51.net/article/126937.htm)
+
+本来执行如下命令即可，但是没效果
+
+```
+"scripts": {
+    "dev": "sass --watch src/styles/main.scss:src/styles/main.css && node build/dev-server.js",
+    "build": "sass src/styles/main.scss src/styles/main.css && node build/build.js"
+},
+```
+
+所以在根目录多了两个 bat 文件 sass-watch.bat 和 sass-compile.bat，然后
+
+```
+"scripts": {
+    "dev": "start /b sass-watch.bat && node build/dev-server.js",
+    "build": "call sass-compile.bat && node build/build.js"
+},
+```
 
 # Browser support
-
 Modern browsers and IE 10+.
+
 
 # License
 [MIT](http://opensource.org/licenses/MIT)
