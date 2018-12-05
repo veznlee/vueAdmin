@@ -4,6 +4,10 @@
     Clicked: {{ getCount }} times
     <button @click="increment">+</button>
     <button @click="decrement">-</button>
+    <br/>
+    {{ getCount2 }}
+    <input type="text" v-model="getCount3">
+    <input type="text" v-model="getCount4">
     <h1>scss测试</h1>
     
     <div class="scss-box">
@@ -17,7 +21,7 @@
       <div class="scss-message scss-error">5555555555</div>
       <div class="scss-demo">666666666666666666</div>
       <div id="scss-main">
-        <a href="">777777777777777777777</a>
+        <a href="">{{hehe}}</a>
       </div>
     </div>
   </div>
@@ -28,14 +32,36 @@
   import { mapActions } from 'vuex'
 
   export default {
+    data(){
+      return {
+        hehe:'777777777777',
+        getCount4:''
+      }
+    },
     computed: {
+      getCount2(){
+        return this.$store.state.count
+      },
+      //如果用v-model对vuex的数据绑定，则必须声明get和set
+      getCount3:{
+        get:function () {
+          return this.$store.state.count
+        },
+        set (val) {
+          this.$store.commit('setCount', val)
+        }
+      },
       // 使用对象展开运算符将 getters 混入 computed 对象中
       ...mapGetters([
-        'getCount'
+        //等同于getCount：getCount
+        'getCount',
         // ...
       ])
     },
     methods: {
+      myfn(){
+
+      },
       ...mapActions([
         'increment', // 映射 this.increment() 为 this.$store.dispatch('increment')
         'decrement'
@@ -43,6 +69,10 @@
       //...mapActions({
       //  add: 'increment' // 映射 this.add() 为 this.$store.dispatch('increment')
       //})
+    },
+    mounted(){
+      //只在页面初始化时需要用到vuex状态的使用方式
+      this.getCount4 = this.$store.state.count;
     }
   }
 

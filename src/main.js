@@ -7,7 +7,7 @@ import 'element-ui/lib/theme-default/index.css'
 //import './assets/theme/theme-green/index.css'
 
 //全局样式
-import "./styles/main.css";
+//import "./styles/main.css";
 
 import VueRouter from 'vue-router'
 import store from './vuex/store'

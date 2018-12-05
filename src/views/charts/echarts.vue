@@ -24,7 +24,10 @@
                 chartColumn: null,
                 columnChart:null,
                 option:{
-                    title: { text: 'Column Chart' },
+                    title: { 
+                        text: '使用组件实现的可随窗口改变大小的图表',
+                        subtext: '使用了节流技术'
+                    },
                     tooltip: {},
                     xAxis: {
                         data: ["衬衫", "羊毛衫", "雪纺衫", "裤子", "高跟鞋", "袜子"]
@@ -58,7 +61,7 @@
             drawColumnChart() {
                 this.chartColumn = echarts.init(document.getElementById('chartColumn'));
                 this.chartColumn.setOption({
-                    title: { text: 'Column Chart' },
+                    title: { text: '基本用法' },
                     tooltip: {},
                     xAxis: {
                         data: ["衬衫", "羊毛衫", "雪纺衫", "裤子", "高跟鞋", "袜子"]
