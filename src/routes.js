@@ -9,6 +9,8 @@ import Page4 from './views/nav2/Page4.vue'
 import Page42 from './views/nav2/Page4-2.vue'
 import Page5 from './views/nav2/Page5.vue'
 import Page6 from './views/nav3/Page6.vue'
+import Page7 from './views/nav3/Page7.vue'
+import Page8 from './views/nav3/Page8.vue'
 import echarts from './views/charts/echarts.vue'
 
 let routes = [
@@ -51,11 +53,13 @@ let routes = [
     {
         path: '/',
         component: Home,
-        name: '',
+        name: '导航三',
         iconCls: 'fa fa-address-card',
-        leaf: true,//只有一个节点
+        //leaf: true,//只有一个节点
         children: [
-            { path: '/page6', component: Page6, name: '导航三' }
+            { path: '/page6', component: Page6, name: '图表递归' },
+            { path: '/page7', component: Page7, name: '自定义弹窗' },
+            { path: '/page8', component: Page8, name: '自定义Tab' }
         ]
     },
     {

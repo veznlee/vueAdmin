@@ -81,17 +81,10 @@ export default {
         this.chart.__resize = throttle(function(){
             chart.resize();
         },200);
-
         
-
         setTimeout(() => {
             window.addEventListener('resize',this.chart.__resize);
         }, 200);
-    },
-    created(){
-        //console.log(this.id);
-        //不能在这里初始化,id还没有和div关联上
-        //this.chart = echarts.init(document.getElementById(this.id));
     },
     destroyed() {
         window.removeEventListener('resize',this.chart.__resize);

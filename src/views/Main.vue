@@ -1,7 +1,5 @@
 <template>
-	<section>
-		main
-	</section>
+	<section></section>
 </template>
 
 <script>
